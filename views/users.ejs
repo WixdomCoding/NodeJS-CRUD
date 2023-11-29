@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Users</title>
+  <style>
+    /* Add some basic styling for the images */
+    .user-image {
+      max-width: 100px;
+      max-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>All Users</h1>
+  <a href="index.html">Back to main</a>
+
+  <ul>
+
+    <% users.forEach(user => { %>
+    <div class="profile">
+      <div>
+        <li>
+          <h2><%= user.username %></h2>
+          <p>First Name: <%= user.firstName %></p>
+          <p>Last Name: <%= user.lastName %></p>
+          <p>Date of Birthday: <%= user.birthday %></p>
+          <p>Occupation: <%= user.occupation %></p>
+      </div>
+      <div>
+          <img class="user-image" src="/uploads/<%= user.image %>" alt="<%= user.username %>">
+        </li>
+      </div>
+    </div>
+    <% }); %>
+
+  </ul>
+</body>
+</html>

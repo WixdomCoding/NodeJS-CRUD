@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Title</title>
+</head>
+<body>
+  <h1>User Update Form</h1>
+  <a href="index.html">Back to main</a>
+
+  <form action="/update/<%= user.username %>" method="POST" enctype="multipart/form-data">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" value="<%= user.firstName %>" required><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" value="<%= user.lastName %>" required><br>
+
+    <label for="birthday">Birthday:</label>
+    <input type="text" id="birthday" name="birthday" value="<%= user.birthday %>" required><br>
+
+    <label for="occupation">Occupation:</label>
+    <input type="text" id="occupation" name="occupation" value="<%= user.occupation %>" required><br>
+
+    <label for="userImage">Profile Image:</label>
+    <input type="file" id="userImage" name="userImage"><br>
+
+    <button type="submit">Update User</button>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skapa användaee</title>
+</head>
+<body>
+  <h1>Skapa din profil!</h1>
+  <a href="index.html">Back to main</a>
+
+  <form action="/create" method="post" enctype="multipart/form-data">
+    <label for="firstName">Förnamn:</label>
+    <input type="text" id="firstName" name="firstName" required><br>
+
+    <label for="lastName">Efternamn:</label>
+    <input type="text" id="lastName" name="lastName" required><br>
+
+    <label for="username">Användarnamn:</label>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="birthday">Födelsedag:</label>
+    <input type="date" id="birthday" name="birthday" required><br>
+
+    <label for="userImage">Ladda upp bild:</label>
+    <input type="file" id="userImage" name="userImage"><br>
+
+    <label for="occupation">Yrke:</label>
+    <input type="text" id="occupation" name="occupation" required><br>
+
+    <button type="submit">Skapa användare</button>
+  </form>
+</body>
+</html>
